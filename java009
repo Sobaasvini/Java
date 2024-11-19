@@ -1,0 +1,25 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	 Scanner sc=new Scanner(System.in);   
+	 int max=Integer.MAX_VALUE;
+	 String name= "";
+	 String str=sc.nextLine();
+	 String[] arr=str.split(" ");
+	 for(int i=0;i<arr.length;i++){
+	     if(arr[i].contains("@")){
+     String[] parts=arr[i].split("@");  
+     String man=parts[0].trim();
+	 int mileage=Integer.parseInt(parts[1].trim());
+	 if(mileage<max){
+	     max=mileage;
+	     name=man;
+	     }
+	   }
+	 }
+	 System.out.print(name);  
+	 sc.close();
+	}
+}
