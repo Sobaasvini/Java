@@ -1,0 +1,26 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int max=0;
+		sc.nextLine();
+		String bat="";
+		
+		for(int i =0;i<N;i++){
+		    String str=sc.nextLine();
+		    String[] arr=str.split(",");
+		    String name=arr[0].trim();
+		    int score=Integer.parseInt(arr[1].trim());
+		    if(score>max){
+		    max = score;
+		    bat = name;
+		}
+   	    
+	}
+	System.out.println(bat);
+	sc.close();
+}
+}
